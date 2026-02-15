@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Timeline</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Timeline</h1>
+    <div class="timeline" id="timeline"></div>
+    <div class="input-container">
+      <input type="text" class="text-input" id="textInput" placeholder="Введите текст...">
+      <button class="icon-btn" id="audioBtn" title="Записать аудио">🎤</button>
+      <button class="icon-btn" id="videoBtn" title="Записать видео">📹</button>
+    </div>
+  </div>
+
+  <!-- Модальное окно для ручного ввода координат -->
+  <div class="modal" id="coordsModal">
+    <div class="modal-content">
+      <h3>Не удалось получить координаты</h3>
+      <p>Введите координаты вручную:</p>
+      <input type="text" id="coordsInput" placeholder="51.50851, -0.12572">
+      <div class="modal-buttons">
+        <button class="btn btn-ok" id="coordsOk">OK</button>
+        <button class="btn btn-cancel" id="coordsCancel">Отмена</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно для записи аудио -->
+  <div class="modal" id="audioModal">
+    <div class="modal-content">
+      <h3>Запись аудио</h3>
+      <div class="timer" id="audioTimer">00:00</div>
+      <div class="modal-buttons">
+        <button class="btn btn-ok" id="audioOk">✓</button>
+        <button class="btn btn-cancel" id="audioCancel">✕</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
