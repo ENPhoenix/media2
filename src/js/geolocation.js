@@ -48,10 +48,10 @@ export function showCoordinatesModal() {
 
     const onOk = () => {
       if (resolved) return;
-      resolved = true;
 
       try {
         const coords = parseCoordinates(input.value);
+        resolved = true;
         cleanup();
         resolve(coords);
       } catch (error) {
@@ -62,6 +62,7 @@ export function showCoordinatesModal() {
         }, 2000);
       }
     };
+
 
     const onCancel = () => {
       if (resolved) return;
